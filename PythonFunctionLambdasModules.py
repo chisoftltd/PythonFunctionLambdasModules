@@ -1,8 +1,10 @@
 # PythonFunctionLambdasModules by ChisoftMedia
 
 # Calling a Function
+import math
 import os
 import platform
+import sys
 import time
 import mymodule as mx
 import mymodule
@@ -147,6 +149,12 @@ print(k)
 x = dir((platform))
 print(x)
 
+listOfItems = dir(math)
+print(listOfItems)
+
+print(sys.path)
+
 # Import From Module
 a = person1["name"]
 print(a)
+
