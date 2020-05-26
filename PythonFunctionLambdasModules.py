@@ -1,6 +1,16 @@
 # PythonFunctionLambdasModules by ChisoftMedia
 
 # Calling a Function
+import os
+import platform
+import time
+import mymodule as mx
+import mymodule
+from mymodule import person1
+from time import sleep
+
+
+
 def my_function():
     print("Hello from my function!")
 
@@ -83,3 +93,60 @@ def tri_recursion(k):
 print("\n\nRecursion Example Results")
 tri_recursion(6)
 print(tri_recursion(60))
+
+################
+# Python Lambda
+################
+
+a = lambda x : x + 10
+print(a(5))
+
+x = lambda a, b : a * b
+print(x(5, 6))
+
+x = lambda a, b : a + b
+print(x(5, 6))
+
+x = lambda a, b, c : a + b + c
+print(x(10, 11, 13))
+
+# Why Use Lambda Functions?
+def myfunc(n):
+    return lambda a: a * n
+
+mydoubler = myfunc(6)
+print(mydoubler(11))
+
+print()
+print()
+
+mytripler = myfunc(3)
+print(mytripler(11))
+
+
+
+# Use a Module
+mymodule.greeting("Benjamin")
+
+# Variables in Module
+a = mymodule.person1["age"]
+print(a)
+
+# Re-naming a Module
+a = mx.person1["Country"]
+print(a)
+
+# Built-in Modules
+x = platform.machine() # .system()
+print(x)
+
+k = platform.system()
+print(k)
+
+# Using the dir() Function
+x = dir((platform))
+print(x)
+
+# Import From Module
+a = person1["name"]
+print(a)
